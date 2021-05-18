@@ -14,8 +14,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
-	PropertyManager applicationProperties = null;
-	String applicationUrl = null;
+	public PropertyManager applicationProperties = null;
+	public String applicationUrl = null;
 	public static WebDriver driver;
 	
 	@BeforeMethod
@@ -30,7 +30,9 @@ public class BaseTest {
 		driver.manage().window().maximize();
 	}
 
-	
+	public static WebDriver getDriver() {
+		return driver;
+	}
 	@AfterMethod
 	public void tearDown() {
 		//driver.quit();
