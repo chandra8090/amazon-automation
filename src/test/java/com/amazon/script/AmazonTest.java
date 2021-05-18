@@ -2,11 +2,12 @@ package com.amazon.script;
 
 import org.testng.annotations.Test;
 
-public class AmazonTest {
+import com.amazon.script.base.BaseTest;
+
+public class AmazonTest extends BaseTest {
 
 	@Test
 	public void verifyProductAddTest() {
-		
-		
+
 	}
 }
