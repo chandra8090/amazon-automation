@@ -46,12 +46,18 @@ public class AmazonTest extends BaseTest {
 		// Search For the product
 		homePage.search(searchText);
 
+		
 		SearchResultsPage searchResultsPage = new SearchResultsPage();
+		//Filter the products with colour, internal memory 
 		searchResultsPage.filterProduct(colour, internalMemory);
+		//Search for product with name, internal memory and colour
 		searchResultsPage.searchAndClickProduct(addName, internalMemory, colour);
+		
+		//Click the Buy Now button
 		ProductPage productPage = new ProductPage();
 		productPage.clickBuyNow();
 
+		// Add new Address
 		AddressPage addressPage = new AddressPage();
 		addressPage.addNewAddress(addName, mobileNumber, pincode, apartment, area, landMark, town, state);
 
